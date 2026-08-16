@@ -3,44 +3,48 @@
     "name": "Butler",
     "slug": "butler",
     "scheme": "butler",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/favicon.png"
     },
     "experiments": {
-      "tsconfigPaths": true
+      "typedRoutes": true
     },
     "plugins": [
       [
         "expo-splash-screen",
         {
-          "image": "./assets/splash.png",
+          "image": "./assets/images/splash-pattern.png",
           "backgroundColor": "#ffffff"
         }
       ],
       "expo-video",
-      "expo-router"
+      "expo-router",
+      "expo-asset"
     ],
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "dark",
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "io.github.rexseven.butler"
     },
     "android": {
+      "package": "io.github.rexseven.butler",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "extra": {
       "eas": {
-        "projectId": "f8ac84a9-ca56-4094-bccb-1a46ac0eddeb"
-      }
+        "projectId": "b980ad43-b0ac-42a3-9274-2f5018f76cc7"
+      },
+      "router": {}
     },
-    "owner": "elysiumnp"
+    "owner": "rexseven"
   }
 }
