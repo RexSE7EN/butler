@@ -5,10 +5,21 @@ const Onboarding = () => {
   return (
     <View>
       <Link
-        href={'/(tabs)'}
-        className="align-center h-full items-center justify-center rounded p-4 text-blue-500">
-        Go to Home
+        href={'/(tabs)'} asChild
+        className="align-center items-center mb-1 justify-center rounded p-4">
+        <Text className="text-red-500 border-2 border-blue-500">
+          Go to Home
+        </Text>
       </Link>
+      <Link
+        href={'/'} asChild
+        className="items-center justify-center rounded p-4"
+      >
+        <Text className="text-red-500 border-2 border-blue-500">
+          Restart to Index
+        </Text>
+      </Link>
+
     </View>
   );
 };

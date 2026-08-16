@@ -5,6 +5,7 @@
     "scheme": "butler",
     "version": "0.0.1",
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/images/favicon.png"
     },
     "experiments": {

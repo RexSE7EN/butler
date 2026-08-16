@@ -1,12 +1,13 @@
 import { Tabs } from 'expo-router';
 import { tabs } from '@/constants/data';
 import { Image, View } from 'react-native';
+import clsx from 'clsx';
 
 const TabLayout = () => {
   const TabIcon = ({ focused, icon }: TabIconProps) => {
     return (
       <View className="tabs-icon">
-        <View className={`tabs-pill ${focused ? 'tab-active' : ''}`}>
+        <View className={clsx('tabs-pill', focused && 'tabs-active')}>
           <Image source={icon} resizeMode="contain" className="tabs-glyph" />
         </View>
       </View>
