@@ -1,26 +1,21 @@
-import { View, Text } from 'react-native';
-import { Link } from 'expo-router';
+import { completeOnboarding } from "@/utils/onboarding";
+import { useRouter } from "expo-router";
+import {Button, Text} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Onboarding = () => {
-  return (
-    <View>
-      <Link
-        href={'/(tabs)'} asChild
-        className="align-center items-center mb-1 justify-center rounded p-4">
-        <Text className="text-red-500 border-2 border-blue-500">
-          Go to Home
-        </Text>
-      </Link>
-      <Link
-        href={'/'} asChild
-        className="items-center justify-center rounded p-4"
-      >
-        <Text className="text-red-500 border-2 border-blue-500">
-          Restart to Index
-        </Text>
-      </Link>
+  const router = useRouter();
 
-    </View>
+  const handleGetStarted = async () => {
+    await completeOnboarding();
+    router.replace("/(auth)/sign-in");
+  };
+
+  return(
+    <SafeAreaView>
+      <Text>Onboarding Screen</Text>
+      <Button title="Get Started" onPress={handleGetStarted} />
+    </SafeAreaView>
   );
 };
 export default Onboarding;

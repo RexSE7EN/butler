@@ -21,7 +21,9 @@
       ],
       "expo-video",
       "expo-router",
-      "expo-asset"
+      "expo-asset",
+      "expo-secure-store",
+      "@clerk/expo"
     ],
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
